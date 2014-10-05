@@ -43,8 +43,8 @@ a:hover {
     height: 40px !important;
 }
 #loading {
-    display: flex;
-    width: 200px;
+    position: relative;
+    width: 170px;
     height: 0px;
     margin: 60px auto 0;
     overflow: hidden;
@@ -52,7 +52,14 @@ a:hover {
     background: url('../images/Windows8 loader.gif') left center no-repeat;
 }
 #loadText {
-    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 130px;
+    height: 20px;
+    margin: auto 0 auto auto;
     font-size: 20px;
     color: #e66;
 }
@@ -61,37 +68,52 @@ header {
     top: 0;
     width: 100%;
     height: 50px;
-    display: flex;
     background-color: #00a9a9;
 }
 #logo {
-    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 26px;
     margin: auto auto auto 10px;
-    flex: 7;
+    color: #fff;
+    font-size: 26px;
+}
+#logo a{
+    font-size:inherit;
 }
 a {
     text-decoration: none;
     color: #fff;
     font-size: 20px;
 }
-#search {
-    display: none;
-    border: 0;
-    height: 90%;
-    background-color: transparent;
-    border-bottom: 1px solid #fff;
-    /*    box-shadow: 0 1px 1px #fff;*/
-    color: #fff;
-}
+
+
 #searchBtn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 10%;
+    height: 26px;
     font-size: 26px;
     color: #fff;
-    margin: auto 20px auto auto;
+    margin: auto 70px auto auto;
     text-align: right;
-    flex: 1;
+
 }
 #refreshBtn {
-    flex: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 10%;
+    height: 26px;
     margin: auto 10px auto auto;
     color: #fff;
     font-size: 26px;
@@ -103,16 +125,17 @@ a {
     transition: 0.6s;
 }
 #urlText {
-    height: 30px;
+    height: 100%;
     border: 1px solid #aaa;
     max-width: 300px;
     width: 80%;
 }
 #submitBtn {
-    height: 30px;
+    height: 100%;
     width: 20%;
     max-width: 100px;
     background: #00a9a9;
     border: 0px solid #eee;
     color: #fff;
+    padding: 0;
 }

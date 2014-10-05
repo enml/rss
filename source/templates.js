@@ -2,7 +2,7 @@ APP.templates = (function () {
     'use strict';
 
     function application() {
-        return '<header><h1 id="logo" ><span class="fa fa-soundcloud"></span><a href="#">资讯快读</a></h1><input type="search" id="search" placeholder="输入订阅网址"><span class="fa fa-refresh" id="refreshBtn"></span><span class="fa fa-search" id="searchBtn"></header><div class="container"><div id="loading"><span id="loadText">正在加载内容</span></div><div id="form"><input type="search" id="urlText" value="http://n.rss.qq.com/rss/tech_rss.php"><input type="button" value="订阅" id="submitBtn"></div></div><article id="body"></article>';
+        return '<header><h1 id="logo" ><span class="fa fa-soundcloud"></span><a href="#">资讯快读</a></h1><span class="fa fa-refresh" id="refreshBtn"></span><span class="fa fa-search" id="searchBtn"></header><div class="container"><div id="loading"><span id="loadText">正在加载内容</span></div><div id="form"><input type="search" id="urlText" value="http://n.rss.qq.com/rss/tech_rss.php"><input type="button" value="订阅" id="submitBtn"></div></div><article id="body"></article>';
     }
 
 

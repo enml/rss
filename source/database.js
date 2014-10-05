@@ -28,7 +28,7 @@ APP.database = (function () {
         }
 
         function errorCallback(tx, e) {
-            alert("An error has occurred");
+            alert("e.message");
         }
 
         smallDatabase.transaction(function (tx) {
