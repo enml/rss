@@ -11,16 +11,16 @@ body {
     line-height: 1.1em;
     font-family: Arial, Helvetica, sans-serif;
 }
-#body{
+#body {
     padding: 0px 10px 10px;
 }
-ul{
+ul {
     padding: 0;
 }
-li{
+li {
     list-style-type: none;
 }
-img{
+img {
     max-width: 100% !important;
 }
 h2 a,
@@ -39,7 +39,7 @@ a:hover {
     background: #0aa7d6;
     text-decoration: none;
 }
-.show{
+.show {
     height: 40px !important;
 }
 #loading {
@@ -48,9 +48,7 @@ a:hover {
     height: 0px;
     margin: 60px auto 0;
     overflow: hidden;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+    transition: 0.5s ease-in;
     background: url('/images/Windows8 loader.gif') left center no-repeat;
 }
 #loadText {
@@ -60,7 +58,7 @@ a:hover {
 }
 header {
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
     height: 50px;
     display: flex;
@@ -85,16 +83,36 @@ a {
     /*    box-shadow: 0 1px 1px #fff;*/
     color: #fff;
 }
-.searchBtn {
+#searchBtn {
     font-size: 26px;
     color: #fff;
     margin: auto 20px auto auto;
     text-align: right;
     flex: 1;
 }
-#refreshBtn{
-    flex:1;
-    margin:auto 10px auto auto;
-    color: #fff;    
+#refreshBtn {
+    flex: 1;
+    margin: auto 10px auto auto;
+    color: #fff;
     font-size: 26px;
+}
+#form {
+    height: 0px;
+    overflow: hidden;
+    padding: 0 10px;
+    transition: 0.6s;
+}
+#urlText {
+    height: 30px;
+    border: 1px solid #aaa;
+    max-width: 300px;
+    width: 80%;
+}
+#submitBtn {
+    height: 30px;
+    width: 20%;
+    max-width: 100px;
+    background: #00a9a9;
+    border: 0px solid #eee;
+    color: #fff;
 }

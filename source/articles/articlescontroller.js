@@ -14,17 +14,16 @@ APP.articlesController = (function () {
     }
 
     function synchronizeWithServer() {
+        var script = document.createElement("script"),
+            urlText = $("#urlText").val();
         while ($(".getRss")[0]) {
-            console.log(!!$(".getRss")[0])
             $(".getRss")[0].parentNode.removeChild($(".getRss")[0]);
         }
-        var script = document.createElement("script"),
-            urlText = $("#url").val();
         script.type = "text/javascript";
         script.className = "getRss";
-        script.src = "http://ajax.googleapis.com/ajax/services/feed/load?q=" + "http://n.rss.qq.com/rss/tech_rss.php" + "&v=2.0&callback=feed&context=c&num=15";
+        script.src = "http://ajax.googleapis.com/ajax/services/feed/load?q=" + urlText + "&v=2.0&callback=feed&context=c&num=15";
         document.body.appendChild(script);
-        APP.templates.articleLoading();
+        APP.templates.show($("#loading"));
     }
 
 
@@ -32,7 +31,7 @@ APP.articlesController = (function () {
         synchronizeWithServer: synchronizeWithServer,
         showArticleList: showArticleList,
         showArticle: showArticle,
-//        getDataSuccess:getDataSuccess
+        //        getDataSuccess:getDataSuccess
     };
 }());
 

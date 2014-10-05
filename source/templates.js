@@ -2,13 +2,9 @@ APP.templates = (function () {
     'use strict';
 
     function application() {
-        return '<header><h1 id="logo" ><span class="fa fa-soundcloud"></span><a href="#">资讯快读</a></h1><input type="search" id="search" placeholder="输入订阅网址"><span class="fa fa-refresh" id="refreshBtn"></span><span class="fa fa-search searchBtn"></header><div id="loading"><span id="loadText">正在加载内容</span></div><article id="body"></article>';
+        return '<header><h1 id="logo" ><span class="fa fa-soundcloud"></span><a href="#">资讯快读</a></h1><input type="search" id="search" placeholder="输入订阅网址"><span class="fa fa-refresh" id="refreshBtn"></span><span class="fa fa-search" id="searchBtn"></header><div class="container"><div id="loading"><span id="loadText">正在加载内容</span></div><div id="form"><input type="search" id="urlText" value="http://n.rss.qq.com/rss/tech_rss.php"><input type="button" value="订阅" id="submitBtn"></div></div><article id="body"></article>';
     }
 
-    //    function home() {
-    ////        return '<button id="refreshButton">刷新新闻</button><div id="titles"></div></div>';
-    //
-    //    }
 
     function articleList(articles) {
         var i, l, output = '';
@@ -16,7 +12,7 @@ APP.templates = (function () {
         if (!articles.length) {
             APP.articlesController.synchronizeWithServer();
         }
-        APP.templates.hideLoading();
+        APP.templates.hide([$("#loading"),$("#form")]);
         for (i = 0, l = articles.length; i < l; i = i + 1) {
             output = output + '<li><h2><a href="#' + articles[i].id + '" data-transition="flow">' + articles[i].title + '</a></h2>' +
                 '<p class="byline">作者：<strong>' + articles[i].author + '</strong> ，发表日期：' + articles[i].date + '</p></li>';
@@ -30,23 +26,30 @@ APP.templates = (function () {
         if (!articles[0]) {
             window.location = '#error';
         }
-        APP.templates.hideLoading();
+        APP.templates.hide([$("#loading"),$("#form")]);
         return '<h2>' + articles[0].title + '</h2><h3>作者：' + articles[0].author + ' ，发表日期：' + articles[0].date + '</h3>' + articles[0].body;
     }
 
-    function articleLoading() {
-        $("#loading").addClass("show");
+    function show(ele) {
+        ele.addClass("show");
     }
 
-    function hideLoading() {
-        $("#loading").removeClass("show");
+    function hide(ele) {
+        if (ele.length > 1) {
+            for (var i = 0, len = ele.length; i < len; i++) {
+                ele[i].removeClass("show");
+            }
+        } else {
+            ele.removeClass("show");
+        }
     }
+
 
     return {
         application: application,
         articleList: articleList,
         article: article,
-        articleLoading: articleLoading,
-        hideLoading: hideLoading
+        show: show,
+        hide: hide
     };
 }());

@@ -26,7 +26,7 @@ APP.applicationController = (function () {
     }*/
 
     function showArticle(id) {
-        $("#body").html(APP.templates.articleLoading());
+        $("#body").html(APP.templates.show($("#loading")));
         APP.articlesController.showArticle(id);
     }
 
@@ -54,7 +54,7 @@ APP.applicationController = (function () {
 
             // Create app elements
             $("body").html(APP.templates.application());
-            //listen refresh button event
+            //listen event
             $('#refreshBtn').click(function () {
                 // If the user is offline, don't bother trying to synchronize
                 if (navigator && navigator.onLine === false) {
@@ -63,11 +63,18 @@ APP.applicationController = (function () {
                     APP.articlesController.synchronizeWithServer();
                 }
             });
-            $("#logo").click(function(){
-               APP.templates.hideLoading();
+            $("#searchBtn").click(function() {
+                APP.templates.show($("#form"));
+            });
+            $("#logo").click(function () {
+                APP.templates.hide([$("#loading"),$("#form")]);
+            });
+            $("#submitBtn").click(function(){
+                APP.templates.hide($("#form"));
+                APP.articlesController.synchronizeWithServer();
             })
             // Remove our loading splash screen
-            APP.templates.hideLoading();
+            APP.templates.hide($("#loading"));
 
             route();
         });
