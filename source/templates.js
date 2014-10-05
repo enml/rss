@@ -27,7 +27,7 @@ APP.templates = (function () {
             window.location = '#error';
         }
         APP.templates.hide([$("#loading"),$("#form")]);
-        return '<h2>' + articles[0].title + '</h2><h3>作者：' + articles[0].author + ' ，发表日期：' + articles[0].date + '</h3>' + articles[0].body;
+        return '<h2 id="articleTitle">' + articles[0].title + '</h2><div class="author">作者：' + articles[0].author + ' <br>发表日期：' + articles[0].date + '</div>' + articles[0].body;
     }
 
     function show(ele) {

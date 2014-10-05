@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
+p{
+    font-size: 16px important;
+}
 #headlines h2 {
     font-weight: bold;
     font-size: 2.2em;
@@ -13,6 +16,11 @@ body {
 }
 #body {
     padding: 0px 10px 10px;
+    font-size: 16px;
+    line-height: 25px;
+}
+#articleTitle{
+    text-align: center;
 }
 ul {
     padding: 0;
@@ -22,17 +30,20 @@ li {
 }
 img {
     max-width: 100% !important;
+    margin: 10px 0;
 }
 h2 a,
 h3 a {
-    color: gray;
+    color: #444;
+    font-weight: 100;
+    font-size: 17px;
     text-decoration: none;
     border: none;
 }
 .byline {
     color: #aaa;
     font-size: 12px;
-    margin: -1em 0 .7em;
+    margin: -1.7em 0 .7em;
 }
 a:hover {
     color: #fff;
@@ -71,6 +82,11 @@ header {
     background-color: #00a9a9;
     box-shadow: 0 3px 9px #aaa;
     z-index: 99;
+}
+.author{
+    text-align: center;
+    color: #888;
+    font-size: 12px;
 }
 #logo {
     position: absolute;
