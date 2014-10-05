@@ -63,13 +63,13 @@ APP.applicationController = (function () {
                     APP.articlesController.synchronizeWithServer();
                 }
             });
-            $("#searchBtn").click(function() {
+            $("#searchBtn").click(function () {
                 APP.templates.show($("#form"));
             });
             $("#logo").click(function () {
-                APP.templates.hide([$("#loading"),$("#form")]);
+                APP.templates.hide([$("#loading"), $("#form")]);
             });
-            $("#submitBtn").click(function(){
+            $("#submitBtn").click(function () {
                 APP.templates.hide($("#form"));
                 APP.articlesController.synchronizeWithServer();
             })
