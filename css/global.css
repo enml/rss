@@ -49,7 +49,7 @@ a:hover {
     margin: 60px auto 0;
     overflow: hidden;
     transition: 0.5s ease-in;
-    background: url('/images/Windows8 loader.gif') left center no-repeat;
+    background: url('images/Windows8 loader.gif') left center no-repeat;
 }
 #loadText {
     margin: auto;
