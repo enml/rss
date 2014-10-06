@@ -10,25 +10,6 @@ source/templates.js
 source/application/applicationcontroller.js
 source/articles/article.js
 source/articles/articlescontroller.js
-font-awesome-4.1.0/css/font-awesome.min.css
-font-awesome-4.1.0/fonts/FontAwesome.otf
-font-awesome-4.1.0/fonts/fontawesome-webfont.eot
-font-awesome-4.1.0/fonts/fontawesome-webfont.svg
-font-awesome-4.1.0/fonts/fontawesome-webfont.ttf
-font-awesome-4.1.0/fonts/fontawesome-webfont.woff
-font-awesome-4.1.0/less/bordered-pulled.less
-font-awesome-4.1.0/less/core.less
-font-awesome-4.1.0/less/fixed-width.less
-font-awesome-4.1.0/less/font-awesome.less
-font-awesome-4.1.0/less/icons.less
-font-awesome-4.1.0/less/larger.less
-font-awesome-4.1.0/less/list.less
-font-awesome-4.1.0/less/mixins.less
-font-awesome-4.1.0/less/path.less
-font-awesome-4.1.0/less/rotated-flipped.less
-font-awesome-4.1.0/less/spinning.less
-font-awesome-4.1.0/less/stacked.less
-font-awesome-4.1.0/less/variables.less
 
 
 NETWORK:
