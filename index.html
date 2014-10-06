@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <!--    <script type="text/javascript" src="jquery.mobile.custom.min.js"></script>-->
-<!--    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>-->
+    <!--    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>-->
     <script type="text/javascript">
         function startWithOfflineResources() {
             var resources;
@@ -60,6 +60,7 @@
         window.APP = {};
         $(document).ready(function () {
             var APP_START_FAILED = "I'm sorry, the app can't start right now.";
+
             // If we know the device is offline, don't try to load new resources
             if (navigator && navigator.onLine === false) {
                 startWithOfflineResources();
@@ -79,6 +80,28 @@
 </head>
 
 <body>
+    <header></header>
+    <div id="mask">
+        <ul id="bars">
+            <li class="fa fa-refresh bar" id="refreshBtn"><span class="barItem">刷新</span>
+            </li>
+            <li class="fa fa-search bar" id="searchBtn"><span class="barItem">订阅</span>
+            </li>
+            <li class="fa fa-heart-o bar" id="saveBtn"><span class="barItem">收藏</span>
+            </li>
+            <li class="fa fa-cog bar" id="configBtn"><span class="barItem">设置</span>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div id="loading"><span id="loadText">正在加载内容</span>
+        </div>
+        <div id="form">
+            <input type="search" id="urlText" value="http://n.rss.qq.com/rss/tech_rss.php">
+            <input type="button" value="订阅" id="submitBtn">
+        </div>
+    </div>
+    <article id="body"></article>
 </body>
 
 </html>

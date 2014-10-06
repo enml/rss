@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
-p{
+p {
     font-size: 16px important;
 }
 #headlines h2 {
@@ -19,7 +19,7 @@ p{
     font-size: 16px;
     line-height: 25px;
 }
-#articleTitle{
+#articleTitle {
     text-align: center;
 }
 ul {
@@ -83,7 +83,7 @@ header {
     box-shadow: 0 3px 9px #aaa;
     z-index: 99;
 }
-.author{
+.author {
     text-align: center;
     color: #888;
     font-size: 12px;
@@ -94,36 +94,47 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 70%;
+    width: 50%;
     height: 26px;
-    margin: auto auto auto 5px;
+    margin: auto auto auto 10px;
     color: #fff;
     font-size: 26px;
 }
-#logo a{
-    font-size:20px;
+#logo a {
+    font-size: 20px;
     font-weight: 100;
+}
+#return {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 30%;
+    height: 26px;
+    margin: auto auto auto 0px;
+    color: #fff;
+    font-weight: 100;
+    /*    font-size: 20px;*/
+    line-height: 26px;
 }
 a {
     text-decoration: none;
     color: #fff;
     font-size: 20px;
 }
-
-
-#searchBtn {
+/*#searchBtn {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     width: 10%;
-    height: 26px;
-    font-size: 26px;
+    height: 23px;
+    font-size: 23px;
     color: #fff;
     margin: auto 70px auto auto;
     text-align: right;
-
 }
 #refreshBtn {
     position: absolute;
@@ -132,10 +143,25 @@ a {
     left: 0;
     right: 0;
     width: 10%;
-    height: 26px;
+    height: 23px;
     margin: auto 4px auto auto;
     color: #fff;
-    font-size: 26px;
+    font-size: 23px;
+}*/
+
+#barsBt {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    margin: auto 10px auto auto;
+    text-align: right;
+    color: #fff;
+    font-size: 23px;
+    line-height: 50px;
 }
 #form {
     height: 0px;
@@ -151,10 +177,39 @@ a {
 }
 #submitBtn {
     height: 100%;
-    width: 20%;
+    width: 18%;
     max-width: 100px;
     background: #00a9a9;
     border: 0px solid #eee;
     color: #fff;
     padding: 0;
+}
+.fa.bar {
+    display: block !important;
+    font-size: 16px;
+    padding: 15px 0 15px 20px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    font-weight: 100;
+}
+.barItem {
+    margin-left: 10px;
+}
+#bars {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: 150px;
+    margin: 0;
+    background: #fff;
+    box-shadow: -2px 2px 5px #aaa;
+}
+#mask {
+    display: none;
+    position: fixed;
+    top: 50px;
+    height: 100%;
+    width: 100%;
+    background: rgba(230, 230, 230, 0.6);
+    z-index: 99;
 }

@@ -26,7 +26,8 @@ APP.applicationController = (function () {
     }*/
 
     function showArticle(id) {
-        $("#body").html(APP.templates.show($("#loading")));
+        //        $("#body").html(APP.templates.show($("#loading")));
+        APP.templates.show($("#loading"));
         APP.articlesController.showArticle(id);
     }
 
@@ -53,9 +54,16 @@ APP.applicationController = (function () {
             $(window).bind("hashchange", route);
 
             // Create app elements
-            $("body").html(APP.templates.application());
+            $("header").html(APP.templates.home());
+            $("header").on("click", "#logo,#return", function (e) {//传入的目标事件不需要$("#logo"),直接#logo就行
+                $("#mask").css("display", "none");
+                APP.templates.hide([$("#loading"), $("#form")]);
+            }).on("click","#barsBt",function(){
+                $("#mask").css("display", "block")
+            })
             //listen event
             $('#refreshBtn').click(function () {
+                $("#mask").css("display", "none");
                 // If the user is offline, don't bother trying to synchronize
                 if (navigator && navigator.onLine === false) {
                     offlineWarning();
@@ -63,16 +71,16 @@ APP.applicationController = (function () {
                     APP.articlesController.synchronizeWithServer();
                 }
             });
+        
             $("#searchBtn").click(function () {
+                $("#mask").css("display", "none");
                 APP.templates.show($("#form"));
             });
-            $("#logo").click(function () {
-                APP.templates.hide([$("#loading"), $("#form")]);
-            });
+
             $("#submitBtn").click(function () {
                 APP.templates.hide($("#form"));
                 APP.articlesController.synchronizeWithServer();
-            })
+            });
             // Remove our loading splash screen
             APP.templates.hide($("#loading"));
 

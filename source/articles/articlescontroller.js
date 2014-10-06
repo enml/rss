@@ -3,12 +3,14 @@ APP.articlesController = (function () {
 
     function showArticleList(id, successCallback) {
         APP.article.selectBasicArticles(function (articles) {
+            $("header").html(APP.templates.home());
             $("#body").html(APP.templates.articleList(articles));
         });
     }
 
     function showArticle(id, successCallback) {
         APP.article.selectFullArticle(id, function (article) {
+            $("header").html(APP.templates.subPage());
             $("#body").html(APP.templates.article(article));
         });
     }
@@ -30,7 +32,7 @@ APP.articlesController = (function () {
     return {
         synchronizeWithServer: synchronizeWithServer,
         showArticleList: showArticleList,
-        showArticle: showArticle,
+        showArticle: showArticle
         //        getDataSuccess:getDataSuccess
     };
 }());
