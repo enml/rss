@@ -10,6 +10,8 @@ source/templates.js
 source/application/applicationcontroller.js
 source/articles/article.js
 source/articles/articlescontroller.js
+font-awesome-4.1.0/css/font-awesome.min.css
+font-awesome-4.1.0/fonts/fontawesome-webfont.woff
 
 
 NETWORK:
