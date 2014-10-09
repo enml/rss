@@ -1,15 +1,11 @@
 CACHE MANIFEST
 #2014.09.27 09:2
 CACHE:
-jquery.min.js
+js/jquery.min.js
+js/app.min.js
 css/global.css
 images/loader.gif
 images/favicon.ico
-source/database.js
-source/templates.js
-source/application/applicationcontroller.js
-source/articles/article.js
-source/articles/articlescontroller.js
 font-awesome-4.1.0/css/font-awesome.min.css
 font-awesome-4.1.0/fonts/fontawesome-webfont.woff
 
